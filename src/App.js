@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Item from "./item";
+import Title from "./Title";
 
 function App() {
+  let arr = [
+    {
+      title: "rabithole",
+      button: "submit",
+      para : "babul the great",
+    },
+    {
+      title: "bithole",
+      button: "addon",
+      para : "ankur the great",
+    },
+    {
+      title: "rithole",
+      button: "login",
+      para : "chotu the great",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Item button={arr[0].button}></Item>
+      <Title title={arr[0].title}></Title>
+      <Title para={arr[0].para}></Title>
+      <Item button={arr[1].button}></Item>
+      <Title title={arr[1].title}></Title>
+      <Title para={arr[1].para}></Title>
+      <Item button={arr[2].button}></Item>
+      <Title title={arr[2].title}></Title>
+      <Title para={arr[2].para}></Title>
+    </>
   );
 }
 
